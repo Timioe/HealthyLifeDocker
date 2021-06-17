@@ -1,0 +1,28 @@
+# version: "3.7" # specify docker-compose version
+
+# # Define the services/ containers to be run
+# services:
+#   frontend: # name of the first service
+#     build: HealthyLifeFrontend # specify the directory of the Dockerfile
+#     ports:
+#       - "4200:4200" # specify port mapping
+
+#   server: # name of the second service
+#     build: HealthyLifeBackend # specify the directory of the Dockerfile
+#     ports:
+#       - "3000:3000" #specify ports mapping
+
+version: "3.7"
+services:
+    healthylifebackend:
+    container_name: backend
+    image: ghcr.io/timioe/healthylifebackend:main
+    ports:
+    - "3000:3000"
+    
+    healthylifefrontend:
+      container_name: frontend
+      image: ghcr.io/timioe/healthylifefrontend:main
+      ports:
+      - "4200:4200"
+    
