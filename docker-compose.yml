@@ -14,15 +14,15 @@
 
 version: "3.7"
 services:
-    healthylifebackend:
+  healthylifebackend:
     container_name: backend
     image: ghcr.io/timioe/healthylifebackend:main
     ports:
     - "3000:3000"
-    
-    healthylifefrontend:
-      container_name: frontend
-      image: ghcr.io/timioe/healthylifefrontend:main
-      ports:
-      - "4200:4200"
+      
+  healthylifefrontend:
+    container_name: frontend
+    image: ghcr.io/timioe/healthylifefrontend:main
+    ports:
+    - "4200:4200"
     
